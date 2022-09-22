@@ -1,0 +1,19 @@
+{
+  "name": "burger-builder-api",
+  "version": "1.0.0",
+  "description": "This is an api for burger builder app and nodejs project for deployment testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/19mddil/Burger-Builder-Api.git"
+  },
+  "author": "Md.Dilshadul Islam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/19mddil/Burger-Builder-Api/issues"
+  },
+  "homepage": "https://github.com/19mddil/Burger-Builder-Api#readme"
+}
