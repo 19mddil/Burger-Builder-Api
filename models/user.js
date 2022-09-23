@@ -2,6 +2,7 @@ const { Schema, model } = require('mongoose');
 const jwt = require('jsonwebtoken');
 const Joi = require('joi');
 
+// Schema Planning
 const userSchema = Schema({
     email: {
         type: String,
@@ -19,6 +20,7 @@ const userSchema = Schema({
 
 });
 
+// Giving token to the Signed Up User
 userSchema.methods.generateJWT = function () {
     const token = jwt.sign(
         {
@@ -33,6 +35,7 @@ userSchema.methods.generateJWT = function () {
     return token;
 }
 
+//Validating the User
 const validateUser = user => {
     const schema = Joi.object({
         email: Joi.string().min(5).max(255).required().email(),
