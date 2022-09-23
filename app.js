@@ -1,5 +1,5 @@
 const express = require('express');
-const cors = require('cors');
+const cors = require('cors');//If frontend and backend servers are different.
 
 //Cross Origin Resource Sharing
 
