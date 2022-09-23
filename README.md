@@ -20,6 +20,6 @@
 - *cors*
 
 ```shell
-    npm i dotenv express morgan bcrypt jsonwebtoken joi lodash cors
+    npm i dotenv express morgan bcrypt jsonwebtoken joi lodash cors mongoose
 ```
 
