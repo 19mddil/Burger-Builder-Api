@@ -36,11 +36,21 @@ const newUser = async (req, res) => {
 }
 
 const authUser = async (req, res) => {
-    let user = await User.findOne({ email: req.body.email });
-    if (!user) return res.status(400).send("Invalid email or password");
+    let user = await User.findOne({
+        email: req.body.email
+    });
+    console.log(user);
+    if (!user) {
+        console.log("null problem");
+        return res.status(400).send("Invalid email or password");
+    }
 
     const validUser = await bcrypt.compare(req.body.password, user.password);
-    if (!validUser) return res.status(400).send("Invalid email or password");
+    if (!validUser) {
+        console.log("here");
+        return res.status(400).send("Invalid email or password")
+    };
+
 
     const token = user.generateJWT();
     res.send({

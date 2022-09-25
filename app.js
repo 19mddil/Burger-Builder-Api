@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');//If frontend and backend servers are different.
 const userRouter = require('./routers/userRouter');
+const orderRouter = require('./routers/orderRouter');
 const morgan = require('morgan');
 
 //Cross Origin Resource Sharing
@@ -16,5 +17,6 @@ app.use(express.json()); // POST -> .json -> req.body
 
 
 app.use('/api/user', userRouter);
+app.use('/api/order', orderRouter);
 
 module.exports = app;
